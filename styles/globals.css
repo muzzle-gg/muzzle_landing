@@ -43,7 +43,7 @@ html {
   --black: #222222;
   --sec-black: #444444;
   --ter-black: #888888;
-  --tert-grey: #999999;
+  --pri-grey: #999999;
 }
 
 html::-webkit-scrollbar {
