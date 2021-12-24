@@ -16,6 +16,11 @@
     "incremental": true,
     "types": ["node", "webpack-env"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/helpers/ImportAll.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "utils/helpers/ImportAll.js"
+  ],
   "exclude": ["node_modules"]
 }
