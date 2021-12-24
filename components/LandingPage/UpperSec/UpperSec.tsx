@@ -1,7 +1,7 @@
 import styles from "./UpperSec.module.css";
 import Image from "next/image";
 
-import { images } from "./../../StaticData";
+import { images } from "../../../utils/constants/StaticData";
 import { importAll } from "./../../../utils/helpers/ImportAll";
 
 const imagesNameArray = [
