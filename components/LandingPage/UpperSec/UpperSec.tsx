@@ -2,7 +2,7 @@ import styles from "./UpperSec.module.css";
 import Image from "next/image";
 
 import { images } from "./../../StaticData";
-import importAll from "./../../../utils/importAll";
+import { importAll } from "./../../../utils/helpers/ImportAll";
 
 const imagesNameArray = [
   "Cross",
@@ -23,21 +23,27 @@ const importedImages = importAll(
 );
 
 const UpperSec = () => {
-  const imagesNameArrayList = imagesNameArray.map((images, index) => {
-    return (
-      <div className={`${styles[`${images}Wrapper`]} ${styles.ImagesWrapper}`}>
-        <Image
-          key={index}
-          src={importedImages[`${images}.svg`].default}
-          alt="image"
-          className={`${styles.Image}`}
-          layout="responsive"
-          quality={100}
-          objectFit="contain"
-        />
-      </div>
-    );
-  });
+  const imagesNameArrayList = Object.keys(importedImages).map(
+    (images, index) => {
+      return (
+        <div
+          className={`${styles[`${imagesNameArray[index]}Wrapper`]} ${
+            styles.ImagesWrapper
+          }`}
+        >
+          <Image
+            key={index}
+            src={importedImages[images as keyof typeof importedImages]}
+            alt="image"
+            className={`${styles.Image}`}
+            layout="responsive"
+            quality={100}
+            objectFit="contain"
+          />
+        </div>
+      );
+    }
+  );
 
   return (
     <div className={styles.Wrapper}>
