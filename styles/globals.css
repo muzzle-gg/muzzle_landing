@@ -43,7 +43,8 @@ html {
   --black: #222222;
   --sec-black: #444444;
   --ter-black: #888888;
-  --tert-grey: #999999;
+  --pri-grey: #999999;
+
   --gradient-brown: radial-gradient(
       74.7% 152.65% at 91.93% 106.06%,
       #191724 0%,

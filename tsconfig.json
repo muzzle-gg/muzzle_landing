@@ -14,11 +14,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "node",
-      "webpack-env" 
-    ]
+    "types": ["node", "webpack-env"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "utils/helpers/ImportAll.js"
+  ],
   "exclude": ["node_modules"]
 }
