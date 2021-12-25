@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  animation: hue 3s infinite linear alternate;
 }
 .SocialMediaText {
   font-weight: 430;
@@ -34,4 +35,12 @@
   justify-content: space-between;
   width: 10rem;
   margin-top: 1rem;
+}
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(60deg);
+  }
 }
