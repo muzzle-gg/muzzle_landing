@@ -1,11 +1,22 @@
 import logo from "../../assets/_General/Logo.svg";
+import facebookLogo from "../../assets/landing/icons/facebook.svg";
+import instagramLogo from "../../assets/landing/icons/instagram.svg";
+import twitterLogo from "../../assets/landing/icons/twitter.svg";
+import linkedinLogo from "../../assets/landing/icons/linkedin.svg";
 
 export const images = {
   logo: logo,
+  socialMediaIcons : {
+    facebook: facebookLogo,
+    instagram: instagramLogo,
+    twitter: twitterLogo,
+    linkedin: linkedinLogo
+    
+  }
 };
 export const content = {
   landingPage: {
-    upperContainer: {
+    upperContainer: { 
       title: [
         "Your",
         "first step towards",

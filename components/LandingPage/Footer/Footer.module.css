@@ -1,30 +1,28 @@
 .FooterContainer {
   width: 100%;
-  max-height: 44rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1536px;
+  margin: 0 auto 10rem auto;
 }
 .ComingText {
-  font-size: 2.6rem;
-  font-weight: 640;
-  margin: 0;
+  font-size: var(--font-70);
+  font-weight: 600;
   text-transform: capitalize;
 }
 .SoonText {
-  background: -webkit-linear-gradient(left, #14ff00, #1dd6ff);
+  background: var(--landing-page-footer-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 10rem;
-  font-weight: 790;
-  margin: 0;
-  padding: 0;
+  font-size: var(--font-200);
+  font-weight: 800;
   text-transform: uppercase;
   animation: hue 3s infinite linear alternate;
 }
 .SocialMediaText {
-  font-weight: 430;
-  font-size: 0.9rem;
+  font-weight: 500;
+  font-size: var(--font-20);
   margin: 0;
   text-transform: uppercase;
   text-align: center;
@@ -32,15 +30,52 @@
 }
 .SocialMediaContainer {
   display: flex;
-  justify-content: space-between;
-  width: 10rem;
   margin-top: 1rem;
 }
+.SocialMediaWrapper {
+  width: 3.5rem;
+  margin-right: 1rem;
+}
+.SocialMediaWrapper:last-child {
+  margin-right: 0;
+}
+
 @-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
   }
   to {
     -webkit-filter: hue-rotate(60deg);
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .ComingText {
+    font-size: var(--font-55);
+  }
+  .SoonText {
+    font-size: var(--font-160);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .ComingText {
+    font-size: var(--font-40);
+  }
+  .SoonText {
+    font-size: var(--font-110);
+  }
+  .SocialMediaText {
+    font-size: var(--font-18);
+  }
+}
+@media only screen and (max-width: 390px) {
+  .ComingText {
+    font-size: calc(4.5px + 9vw);
+  }
+  .SoonText {
+    font-size: calc(3.64px + 27.3vw);
+  }
+  .SocialMediaText {
+    font-size: var(--font-13);
   }
 }

@@ -36,6 +36,12 @@ html {
   --font-45: 4.5rem;
   --font-52: 5.2rem;
   --font-55: 5.5rem;
+  --font-60: 6rem;
+  --font-70: 7rem;
+  --font-110: 11rem;
+  --font-150: 15rem;
+  --font-160: 16rem;
+  --font-200: 20rem;
   --fontv-4: 4vw;
   --fontv-3: 3vw;
   --fontv-35: 3.5vw;
@@ -96,6 +102,7 @@ html {
     #ff4d00 16.51%,
     #ffd80c 86.41%
   );
+  --landing-page-footer-text: -webkit-linear-gradient(left, #14ff00, #1dd6ff);
 }
 
 html::-webkit-scrollbar {

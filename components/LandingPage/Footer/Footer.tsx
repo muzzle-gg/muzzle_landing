@@ -1,12 +1,29 @@
 import styles from "./Footer.module.css";
 
 import Image from "next/image";
-import facebookLogo from "../../../assets/landing/icons/facebook.svg";
-import instagramLogo from "../../../assets/landing/icons/instagram.svg";
-import twitterLogo from "../../../assets/landing/icons/twitter.svg";
-import linkedinLogo from "../../../assets/landing/icons/linkedin.svg";
+import { images } from "../../../utils/constants/StaticData";
 
 const Footer = () => {
+  const socialMediaIconsList = Object.keys(images.socialMediaIcons).map(
+    (item, index) => {
+      return (
+        <div className={styles.SocialMediaWrapper}>
+          <Image
+            key={index}
+            src={
+              images.socialMediaIcons[
+                item as keyof typeof images.socialMediaIcons
+              ]
+            }
+            className={styles.SocialMediaIcon}
+            alt="facebook"
+            layout="responsive"
+          />
+        </div>
+      );
+    }
+  );
+
   return (
     <div className={styles.FooterContainer}>
       <p className={styles.ComingText}>coming</p>
@@ -16,28 +33,7 @@ const Footer = () => {
         <br />
         our social media handles :
       </p>
-      <div className={styles.SocialMediaContainer}>
-        <Image
-          className={styles.SocialMediaIcon}
-          src={facebookLogo}
-          alt="facebook"
-        />
-        <Image
-          src={instagramLogo}
-          alt="instagram"
-          className={styles.SocialMediaIcon}
-        />
-        <Image
-          src={linkedinLogo}
-          alt="linkedin"
-          className={styles.SocialMediaIcon}
-        />
-        <Image
-          src={twitterLogo}
-          alt="twitter"
-          className={styles.SocialMediaIcon}
-        />
-      </div>
+      <div className={styles.SocialMediaContainer}>{socialMediaIconsList}</div>
     </div>
   );
 };
