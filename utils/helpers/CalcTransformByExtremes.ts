@@ -1,12 +1,12 @@
 export const calcTransformByExtremes = (
-  elementUseRef: React.RefObject<HTMLElement>,
+  element: HTMLElement,
   extremes: {
     min: number;
     max: number;
   }
 ) => {
-  const top = elementUseRef.current?.getBoundingClientRect().top;
-  const bottom = elementUseRef.current?.getBoundingClientRect().bottom;
+  const top = element?.getBoundingClientRect().top;
+  const bottom = element?.getBoundingClientRect().bottom;
   const screenHeight = window.innerHeight;
 
   if (!top || !bottom || top > screenHeight) {
@@ -18,6 +18,12 @@ export const calcTransformByExtremes = (
   if (bottom < 0) {
     return extremes.max;
   }
+
+  console.log(
+    extremes.min +
+      (extremes.max - extremes.min) *
+        ((screenHeight - top) / (screenHeight + elementHeight))
+  );
   return (
     extremes.min +
     (extremes.max - extremes.min) *

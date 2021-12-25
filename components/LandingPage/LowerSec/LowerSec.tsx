@@ -68,32 +68,32 @@ const LowerSec = () => {
     let tempElementTransformStates = { ...elementsStyleStates };
     tempElementTransformStates.dots = {
       transform: `translateY(${calcTransformByExtremes(
-        dotsWrapperRef,
+        dotsWrapperRef.current!,
         dotsPosExtremes
       )}%)`,
     };
 
     tempElementTransformStates.mobileComp = {
       transform: `translateY(${calcTransformByExtremes(
-        mobileCompWrapperRef,
+        mobileCompWrapperRef.current!,
         mobileCompPosExtremes
       )}%)`,
     };
 
     tempElementTransformStates.waves = {
       transform: `translateY(${calcTransformByExtremes(
-        wavesWrapperRef,
+        wavesWrapperRef.current!,
         wavesPosExtremes.translateY
       )}%)`,
       filter: `blur(${calcTransformByExtremes(
-        wavesWrapperRef,
+        wavesWrapperRef.current!,
         wavesPosExtremes.blur
       )}px)`,
     };
 
     tempElementTransformStates.content = {
       transform: `translateY(${calcTransformByExtremes(
-        contentWrapperRef,
+        contentWrapperRef.current!,
         contentPosExtremes
       )}%)`,
     };
