@@ -1,0 +1,17 @@
+.Wrapper {
+  grid-gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.Dot {
+  width: 2.2rem;
+  height: 0.6rem;
+  outline: 1px solid var(--sec-black);
+  cursor: pointer;
+}
+.DotInner {
+  background: var(--gradient-dots);
+  transition: opacity 0.3s ease-out;
+  height: 100%;
+  width: 100%;
+}
