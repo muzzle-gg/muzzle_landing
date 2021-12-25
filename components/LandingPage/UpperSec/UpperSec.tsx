@@ -1,8 +1,13 @@
-import styles from "./UpperSec.module.css";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+
+import styles from "./UpperSec.module.css";
 
 import { images, content } from "../../../utils/constants/StaticData";
 import { importAll } from "./../../../utils/helpers/ImportAll";
+import { elementsStylesExtremes } from "./helpers/stylesExtrems";
+import UseScrollStates from "../../../utils/helpers/UseScrollStates";
+import { calcTransformByExtremes } from "../../../utils/helpers/CalcTransformByExtremes";
 
 const imagesNameArray = [
   "Cross",
@@ -59,6 +64,40 @@ const ContentList: any = ({ content, isVertical }: Props) => {
 };
 
 const UpperSec = () => {
+  const elemetsRefArr = useRef([]);
+
+  const [yScrollSate] = UseScrollStates();
+  const [elementsStyleStates, setElementsStyleStates] = useState(
+    Array(7)
+      .fill({})
+      .map((_, index) => {
+        return {
+          transform: `translateY(${elementsStylesExtremes[index].translateY.min}%)translateX(${elementsStylesExtremes[index].translateX.min}%)rotate(${elementsStylesExtremes[index].rotate.min}deg)`,
+        };
+      })
+  );
+
+  useEffect(() => {
+    let tmpElementsStyleStates = [...elementsStyleStates];
+
+    for (let i = 0; i < elemetsRefArr.current.length; i++) {
+      const elem = elemetsRefArr.current[i];
+      tmpElementsStyleStates[i] = {
+        transform: `translateY(${calcTransformByExtremes(
+          elem,
+          elementsStylesExtremes[i].translateY
+        )}%)translateX(${calcTransformByExtremes(
+          elem,
+          elementsStylesExtremes[i].translateX
+        )}%)rotate(${calcTransformByExtremes(
+          elem,
+          elementsStylesExtremes[i].rotate
+        )}deg)`,
+      };
+    }
+    setElementsStyleStates(tmpElementsStyleStates);
+  }, [yScrollSate]);
+
   const imagesNameArrayList = Object.keys(importedImages).map(
     (images, index) => {
       return (
@@ -67,6 +106,8 @@ const UpperSec = () => {
           className={`${styles[`${imagesNameArray[index]}Wrapper`]} ${
             styles.ImagesWrapper
           }`}
+          ref={(el) => (elemetsRefArr.current[index] = el as never)}
+          style={elementsStyleStates[index]}
         >
           <Image
             src={importedImages[images as keyof typeof importedImages]}

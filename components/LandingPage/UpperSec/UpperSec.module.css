@@ -40,6 +40,7 @@
 }
 .ImagesWrapper {
   position: absolute;
+  transition: transform 0.5s ease-out;
 }
 .CrossWrapper {
   width: 3.9%;
