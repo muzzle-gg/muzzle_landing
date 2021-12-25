@@ -19,11 +19,6 @@ export const calcTransformByExtremes = (
     return extremes.max;
   }
 
-  console.log(
-    extremes.min +
-      (extremes.max - extremes.min) *
-        ((screenHeight - top) / (screenHeight + elementHeight))
-  );
   return (
     extremes.min +
     (extremes.max - extremes.min) *
