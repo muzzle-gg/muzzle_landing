@@ -10,17 +10,14 @@ export const calcTransformByExtremes = (
   const screenHeight = window.innerHeight;
 
   if (!top || !bottom || top > screenHeight) {
-    console.log(0);
     return extremes.min;
   }
 
   const elementHeight = bottom - top;
 
   if (bottom < 0) {
-    console.log(1);
     return extremes.max;
   }
-  console.log((screenHeight - top) / (screenHeight + elementHeight));
   return (
     extremes.min +
     (extremes.max - extremes.min) *
