@@ -33,6 +33,7 @@ html {
   --font-42: 4.2rem;
   --font-45: 4.5rem;
   --font-52: 5.2rem;
+  --font-55: 5.5rem;
   --fontv-4: 4vw;
   --fontv-3: 3vw;
   --fontv-35: 3.5vw;
@@ -44,13 +45,33 @@ html {
   --sec-black: #444444;
   --ter-black: #888888;
   --pri-grey: #999999;
+  --sec-white: #e2e2ec;
 
+  /* Gradients */
   --gradient-brown: radial-gradient(
       74.7% 152.65% at 91.93% 106.06%,
       #191724 0%,
       rgba(0, 0, 0, 0) 96.13%
     ),
     linear-gradient(267.65deg, #2c1978 6.74%, #94292e 102.9%);
+  --landing-page-text-gradient: -webkit-linear-gradient(
+    left,
+    rgba(126, 0, 252, 1),
+    rgba(255, 33, 52, 1),
+    rgba(255, 199, 0, 1),
+    rgba(64, 255, 39, 1)
+  );
+  --landing-page-coming-soon-gradient: -webkit-linear-gradient(
+    left,
+    rgba(255, 0, 0, 1),
+    rgba(251, 255, 77, 1)
+  );
+  --hr-line-gradient: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    #ffb208;
 }
 
 html::-webkit-scrollbar {
