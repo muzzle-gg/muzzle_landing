@@ -46,3 +46,22 @@
   opacity: 0;
   transition: opacity 0.3s ease-out;
 }
+
+@media only screen and (max-width: 1000px) {
+  .Wrapper {
+    width: 25rem;
+    height: 52.5rem;
+    padding: 0.8rem;
+    border-radius: 1.9rem;
+  }
+  .Screen {
+    border-radius: 1.2rem;
+  }
+  .CameraDot {
+    position: absolute;
+    top: 1.45rem;
+    right: 1.2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}

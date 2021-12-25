@@ -6,7 +6,7 @@ import styles from "./LowerSec.module.css";
 import Waves from "../../../assets/landing/Waves.png";
 
 import MobileComp from "./MobileComp/MobileComp";
-import Dots from "./Dots/Dots";
+import Dots from "./Dots";
 import UseScrollStates from "../../../utils/helpers/UseScrollStates";
 import useMediaQuery from "./../../../utils/helpers/UseMediaQuery";
 import { calcTransformByExtremes } from "./../../../utils/helpers/CalcTransformByExtremes";
@@ -24,7 +24,7 @@ const mobileCompPosExtremes = {
 
 const wavesPosExtremes = {
   blur: {
-    min: 2,
+    min: 1,
     max: 40,
   },
   translateY: {

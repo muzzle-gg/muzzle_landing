@@ -2,9 +2,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 15rem 0;
+  padding: 18rem 0;
   padding-bottom: 30rem;
   grid-gap: 7rem;
+  overflow-x: hidden;
 }
 
 .WavesSec {
@@ -33,4 +34,53 @@
   width: 40rem;
   transition: transform 0.5s ease-out;
   margin-top: 9rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .DotsSec {
+    margin-top: 6rem;
+  }
+  .ContentSec {
+    width: 25rem;
+    margin-top: 6rem;
+  }
+  .Wrapper {
+    padding: 15rem 0;
+    padding-bottom: 25rem;
+    grid-gap: 4.5rem;
+  }
+  .WavesSec {
+    width: calc(100rem + 20vw);
+    height: calc(30rem + 10vw);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .Wrapper {
+    flex-direction: column;
+  }
+  .WavesSec {
+    bottom: unset;
+    /* filter: blur(5px) !important; */
+    margin-top: 12rem;
+  }
+  .Wrapper {
+    display: flex;
+    align-items: center;
+    grid-gap: 5rem;
+    padding-bottom: 15rem;
+  }
+  .ContentSec {
+    width: min(80%, 40rem);
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .DotsSec {
+    display: none;
+  }
+  .Wrapper {
+    grid-gap: 2rem;
+  }
 }
