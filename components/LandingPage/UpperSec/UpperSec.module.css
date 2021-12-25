@@ -1,9 +1,15 @@
 .Wrapper {
   width: 100%;
-  max-width: 1536px;
   margin: 0 auto;
-  height: 100vh;
   background: var(--gradient-brown);
+  position: relative;
+}
+.SubWrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1536px;
+  height: fit-content;
+  min-height: 100vh;
   position: relative;
 
   padding: 4.5rem 0 5.1rem 0;
@@ -179,8 +185,9 @@
   }
 }
 @media only screen and (max-width: 800px) {
-  .Wrapper {
+  .SubWrapper {
     justify-content: start;
+    padding-bottom: 25rem;
   }
   .LogoWrapper {
     margin-bottom: 5rem;

@@ -75,7 +75,6 @@ const UpperSec = () => {
             layout="responsive"
             quality={100}
             objectFit="contain"
-            
           />
         </div>
       );
@@ -84,27 +83,29 @@ const UpperSec = () => {
 
   return (
     <div className={styles.Wrapper}>
-      <div className={styles.LogoWrapper}>
-        <Image
-          src={images.logo}
-          alt="logo"
-          className={styles.Logo}
-          quality={100}
-          objectFit="contain"
-          layout="responsive"
-        />
+      <div className={styles.SubWrapper}>
+        <div className={styles.LogoWrapper}>
+          <Image
+            src={images.logo}
+            alt="logo"
+            className={styles.Logo}
+            quality={100}
+            objectFit="contain"
+            layout="responsive"
+          />
+        </div>
+        <div>
+          <ContentList
+            content={content.landingPage.upperContainer.title}
+            isVertical={true}
+          />
+        </div>
+        <div className={styles.ComingSoonWrapper}>
+          {content.landingPage.upperContainer.subTitle}
+          <hr className={styles.Line} />
+        </div>
+        {imagesNameArrayList}
       </div>
-      <div>
-        <ContentList
-          content={content.landingPage.upperContainer.title}
-          isVertical={true}
-        />
-      </div>
-      <div className={styles.ComingSoonWrapper}>
-        {content.landingPage.upperContainer.subTitle}
-        <hr className={styles.Line} />
-      </div>
-      {imagesNameArrayList}
     </div>
   );
 };
