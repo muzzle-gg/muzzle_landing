@@ -1,7 +1,7 @@
 import styles from "./UpperSec.module.css";
 import Image from "next/image";
 
-import { images } from "../../../utils/constants/StaticData";
+import { images, content } from "../../../utils/constants/StaticData";
 import { importAll } from "./../../../utils/helpers/ImportAll";
 
 const imagesNameArray = [
@@ -22,23 +22,60 @@ const importedImages = importAll(
   )
 );
 
+type Props = {
+  content: Array<any>;
+  isVertical: boolean;
+};
+
+const ContentList: any = ({ content, isVertical }: Props) => {
+  return (
+    <div
+      className={styles.TitleWrapper}
+      style={
+        isVertical
+          ? {
+              flexDirection: "column",
+            }
+          : {
+              flexDirection: "row",
+            }
+      }
+    >
+      {content.map((item, index) => {
+        return (
+          <>
+            {Array.isArray(item) ? (
+              ContentList({ content: item, isVertical: false })
+            ) : (
+              <p className={`${styles.Title}`} key={index}>
+                {item}
+              </p>
+            )}
+          </>
+        );
+      })}
+    </div>
+  );
+};
+
 const UpperSec = () => {
   const imagesNameArrayList = Object.keys(importedImages).map(
     (images, index) => {
       return (
         <div
+          key={index}
           className={`${styles[`${imagesNameArray[index]}Wrapper`]} ${
             styles.ImagesWrapper
           }`}
         >
           <Image
-            key={index}
             src={importedImages[images as keyof typeof importedImages]}
             alt="image"
             className={`${styles.Image}`}
             layout="responsive"
             quality={100}
             objectFit="contain"
+            
           />
         </div>
       );
@@ -56,6 +93,16 @@ const UpperSec = () => {
           objectFit="contain"
           layout="responsive"
         />
+      </div>
+      <div>
+        <ContentList
+          content={content.landingPage.upperContainer.title}
+          isVertical={true}
+        />
+      </div>
+      <div className={styles.ComingSoonWrapper}>
+        {content.landingPage.upperContainer.subTitle}
+        <hr className={styles.Line} />
       </div>
       {imagesNameArrayList}
     </div>

@@ -1,37 +1,305 @@
 .Wrapper {
   width: 100%;
+  max-width: 1536px;
+  margin: 0 auto;
   height: 100vh;
   background: var(--gradient-brown);
   position: relative;
+  margin-bottom: 10rem;
+  padding: 4.5rem 0 5.1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.TitleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--sec-white);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--font-45);
+  line-height: var(--font-55);
+}
+.TitleWrapper .Title:last-child {
+  background: var(--landing-page-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hue 2s infinite linear alternate;
 }
 .LogoWrapper {
   position: relative;
   width: 12.3rem;
-  margin: auto;
 }
 .ImagesWrapper {
   position: absolute;
 }
 .CrossWrapper {
-  width: 6rem;
-  top: 33.6rem;
-  left: 25.9rem;
+  width: 3.9%;
+  top: 44.3%;
+  left: 16.8%;
+  filter: drop-shadow(-8px 20px 9px rgba(0, 0, 0, 0.1))
+    drop-shadow(0px 9px 8px rgba(0, 0, 0, 0.25));
 }
 .JoystickWrapper {
-  width: 25.7rem;
-  top: 40.9rem;
-  left: 21.3rem;
+  width: 13.6%;
+  transform: rotate(29deg);
+  top: 59.3%;
+  left: 10.6%;
+  filter: drop-shadow(-37px 38px 95px rgba(0, 0, 0, 0.1))
+    drop-shadow(-19px 24px 35px rgba(0, 0, 0, 0.5));
 }
 .KeyboardWrapper {
-  width: 37.1rem;
-  top: 35.5rem;
-  left: -14rem;
+  width: 20.7%;
+  filter: drop-shadow(-35px 39px 20px rgba(0, 0, 0, 0.1))
+    drop-shadow(-3px 24px 18px rgba(0, 0, 0, 0.35));
+  transform: rotate(-26.14deg);
+  top: 36.2%;
+  left: -7.2%;
 }
 .MouseWrapper {
-  width: 24rem;
-  top: 59rem;
-  left: -6.2rem;
+  width: 15.62%;
+  filter: drop-shadow(-30px 40px 17px rgba(0, 0, 0, 0.15))
+    drop-shadow(-11px 16px 14px rgba(0, 0, 0, 0.35));
+  top: 75.2%;
+  left: -4%;
+}
+.PlayIconWrapper {
+  width: 11.7%;
+  filter: drop-shadow(-20px 18px 12px rgba(0, 0, 0, 0.19))
+    drop-shadow(-7px 9px 5px rgba(0, 0, 0, 0.35));
+  left: 91%;
+  top: 48.6%;
+}
+.VrWrapper {
+  width: 24.6%;
+  filter: drop-shadow(-6px 35px 11px rgba(0, 0, 0, 0.09))
+    drop-shadow(0px 12px 19px rgba(0, 0, 0, 0.45));
+  left: 76.2%;
+  top: 81.5%;
+}
+.Joystick2Wrapper {
+  width: 13.5%;
+  top: 64%;
+  left: 76.6%;
+  filter: drop-shadow(-39px 39px 14px rgba(0, 0, 0, 0.12))
+    drop-shadow(-18px 8px 26px rgba(0, 0, 0, 0.4));
 }
 .Image {
   object-fit: contain !important;
+}
+.ComingSoonWrapper {
+  font-weight: 500;
+  font-size: var(--font-40);
+  text-align: center;
+  background: var(--landing-page-coming-soon-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  animation: hue 2s infinite linear alternate;
+}
+.Line {
+  width: 22rem;
+  height: 0.25rem;
+  border: none;
+  margin: 1.4rem auto 0 auto;
+  background: var(--hr-line-gradient);
+}
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-60deg);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .TitleWrapper {
+    font-size: var(--font-36);
+    line-height: initial;
+  }
+  .ComingSoonWrapper {
+    font-size: var(--font-30);
+  }
+  .Line {
+    width: 15rem;
+    letter-spacing: 0.05rem;
+    margin: 1rem auto 0 auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .CrossWrapper {
+    width: 6%;
+    top: 40%;
+    left: 16%;
+  }
+  .JoystickWrapper {
+    width: 16%;
+    top: 55%;
+    left: 8%;
+  }
+  .KeyboardWrapper {
+    width: 23%;
+    top: 35%;
+    left: -9%;
+  }
+  .MouseWrapper {
+    width: 19%;
+    top: 75.2%;
+    left: -4%;
+  }
+  .PlayIconWrapper {
+    width: 14%;
+    left: 91%;
+    top: 46%;
+  }
+  .VrWrapper {
+    width: 27%;
+    left: 76.2%;
+    top: 84%;
+  }
+  .Joystick2Wrapper {
+    width: 16%;
+    top: 65%;
+    left: 76.6%;
+  }
+  .TitleWrapper {
+    font-size: var(--font-30);
+  }
+  .ComingSoonWrapper {
+    font-size: var(--font-22);
+  }
+  .Line {
+    width: 10rem;
+    letter-spacing: 0.05rem;
+    margin: 1rem auto 0 auto;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .Wrapper {
+    justify-content: start;
+  }
+  .LogoWrapper {
+    margin-bottom: 5rem;
+  }
+  .TitleWrapper {
+    font-size: var(--font-26);
+  }
+  .ComingSoonWrapper {
+    margin-top: 5rem;
+    font-size: var(--font-22);
+  }
+  .CrossWrapper {
+    width: 4.7rem;
+    top: 55%;
+    left: 18%;
+  }
+  .JoystickWrapper {
+    top: 63%;
+    left: -1%;
+    width: 12.5rem;
+  }
+  .KeyboardWrapper {
+    width: 18rem;
+    top: 60%;
+    left: 21%;
+  }
+  .MouseWrapper {
+    top: 81.2%;
+    left: 6%;
+    width: 14.8rem;
+  }
+  .PlayIconWrapper {
+    left: 81%;
+    top: 54%;
+    width: 10.9rem;
+  }
+  .VrWrapper {
+    left: 65.2%;
+    top: 87%;
+    width: 21.1rem;
+  }
+  .Joystick2Wrapper {
+    width: 12.5rem;
+    top: 70%;
+    left: 80%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .KeyboardWrapper {
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .TitleWrapper {
+    font-size: var(--font-22);
+  }
+  .ComingSoonWrapper {
+    font-size: var(--font-18);
+    margin-top: 4rem;
+  }
+  .LogoWrapper {
+    width: 10rem;
+    margin-bottom: 4rem;
+  }
+  .CrossWrapper {
+    width: 3rem;
+  }
+  .JoystickWrapper {
+    width: 10rem;
+  }
+  .KeyboardWrapper {
+    width: 16rem;
+  }
+  .MouseWrapper {
+    width: 12rem;
+  }
+  .PlayIconWrapper {
+    width: 9rem;
+  }
+  .VrWrapper {
+    width: 18rem;
+  }
+  .Joystick2Wrapper {
+    width: 10rem;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .MouseWrapper {
+    top: 85.2%;
+    left: -5%;
+  }
+  .JoystickWrapper {
+    top: 70%;
+    left: -4%;
+  }
+  .KeyboardWrapper {
+    left: -17%;
+    top: 50%;
+  }
+  .CrossWrapper {
+    top: 64%;
+    left: 28%;
+  }
+  .TitleWrapper {
+    font-size: var(--font-18);
+  }
+  .LogoWrapper {
+    width: 9rem;
+  }
+  .ComingSoonWrapper {
+    font-size: var(--font-16);
+  }
+  .Line {
+    width: 8rem;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .TitleWrapper {
+    font-size: var(--font-16);
+  }
 }
