@@ -1,0 +1,45 @@
+.Wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.Content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease-out;
+  text-transform: uppercase;
+}
+
+.ContentTitle {
+  background: var(--screen-color-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--font-45);
+  font-weight: bold;
+  color: var(--ter-grey);
+  margin-bottom: 1.5rem;
+}
+
+.Content:nth-child(2) .ContentTitle {
+  background: var(--screen-color-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Content:nth-child(3) .ContentTitle {
+  background: var(--screen-color-3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ContentDesc {
+  width: 90%;
+  font-size: var(--font-28);
+  color: var(--sec-balck);
+  margin-bottom: 1.5rem;
+}

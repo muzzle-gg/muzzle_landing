@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { AppProps /*, AppContext */ } from "next/app";
 
 import styles from "./MobileComp.module.css";
 
@@ -14,22 +15,35 @@ const Screens = importAll(
   )
 );
 
-function MobileComp() {
+type Props = {
+  currentActiveIndex: number;
+};
+
+function MobileComp({ currentActiveIndex }: Props) {
   return (
     <div className={styles.Wrapper}>
       <div className={styles.Screen}>
         <div className={styles.ScreenStack}>
           {Object.keys(Screens).map((key: string, index: number) => {
             return (
-              <div className={styles.ScreenImg} key={index}>
+              <div
+                className={styles.ScreenImg}
+                key={index}
+                style={
+                  currentActiveIndex === index
+                    ? {
+                        opacity: 1,
+                      }
+                    : {
+                        opacity: 0,
+                      }
+                }
+              >
                 <Image
                   src={Screens[key as keyof typeof Screens]}
                   layout="fill"
-                  width={"100%"}
-                  height={"100%"}
                   objectFit="cover"
                   onLoad={(e) => {
-                    console.log(e.target);
                     (e.target as HTMLImageElement).style.opacity = "1";
                   }}
                 />

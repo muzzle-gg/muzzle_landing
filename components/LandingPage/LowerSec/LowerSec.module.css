@@ -1,0 +1,36 @@
+.Wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 15rem 0;
+  padding-bottom: 30rem;
+  grid-gap: 7rem;
+}
+
+.WavesSec {
+  position: absolute;
+  bottom: 2rem;
+  width: 115%;
+  height: 50rem;
+  transition: filter 1s ease-out, transform 0.5s ease-out;
+  opacity: 0.7;
+}
+.MobileSec {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  grid-gap: 2.4rem;
+}
+.DotsSec {
+  margin-top: 7.5rem;
+  transition: transform 0.5s ease-out;
+}
+.MobileCompSec {
+  transition: transform 0.5s ease-out;
+}
+
+.ContentSec {
+  width: 40rem;
+  transition: transform 0.5s ease-out;
+  margin-top: 9rem;
+}
