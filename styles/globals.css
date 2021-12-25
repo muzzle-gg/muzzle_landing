@@ -11,6 +11,7 @@ html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 :root {
   /* Font Sizes */
@@ -26,6 +27,7 @@ html {
   --font-22: 2.2rem;
   --font-24: 2.4rem;
   --font-26: 2.6rem;
+  --font-28: 2.8rem;
   --font-30: 3rem;
   --font-36: 3.6rem;
   --font-38: 3.8rem;
@@ -44,6 +46,7 @@ html {
   --sec-black: #444444;
   --ter-black: #888888;
   --pri-grey: #999999;
+  --ter-grey: #e5e5e5;
 
   --gradient-brown: radial-gradient(
       74.7% 152.65% at 91.93% 106.06%,
@@ -51,6 +54,27 @@ html {
       rgba(0, 0, 0, 0) 96.13%
     ),
     linear-gradient(267.65deg, #2c1978 6.74%, #94292e 102.9%);
+  --gradient-dots: linear-gradient(
+    270deg,
+    rgba(0, 10, 252, 0.5) -30%,
+    rgba(250, 0, 255, 0.5) 99.47%
+  );
+
+  --screen-color-1: radial-gradient(
+    227.33% 243.44% at -64.17% 61.17%,
+    #ff4d00 16.51%,
+    #ff00d6 86.41%
+  );
+  --screen-color-2: radial-gradient(
+    227.33% 243.44% at -64.17% 61.17%,
+    #56007f 16.51%,
+    #ff00d6 86.41%
+  );
+  --screen-color-3: radial-gradient(
+    227.33% 243.44% at -64.17% 61.17%,
+    #ff4d00 16.51%,
+    #ffd80c 86.41%
+  );
 }
 
 html::-webkit-scrollbar {
