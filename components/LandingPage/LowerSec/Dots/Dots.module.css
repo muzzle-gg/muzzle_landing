@@ -15,3 +15,13 @@
   height: 100%;
   width: 100%;
 }
+
+@media only screen and (max-width: 1000px) {
+  .Wrapper {
+    grid-gap: 0.4rem;
+  }
+  .Dot {
+    width: 1.9rem;
+    height: 0.5rem;
+  }
+}
