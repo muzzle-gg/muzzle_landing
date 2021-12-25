@@ -18,9 +18,11 @@ export default function Content({ currentActiveIndex }: ContentProps) {
               currentActiveIndex === index
                 ? {
                     opacity: 1,
+                    pointerEvents: "all",
                   }
                 : {
                     opacity: 0,
+                    pointerEvents: "none",
                   }
             }
           >
