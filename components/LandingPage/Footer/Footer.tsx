@@ -22,7 +22,7 @@ const Footer = () => {
               ]
             }
             className={styles.SocialMediaIcon}
-            alt="facebook"
+            alt={item}
             layout="responsive"
           />
         </a>

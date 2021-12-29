@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "./LowerSec.module.css";
 
-import Waves from "../../../assets/landing/Waves.png";
+import Waves from "../../../assets/landing/Waves.webp";
 
 import MobileComp from "./MobileComp/MobileComp";
 import Dots from "./Dots";

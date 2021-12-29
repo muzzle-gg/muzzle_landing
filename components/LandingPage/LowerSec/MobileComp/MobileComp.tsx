@@ -1,5 +1,4 @@
 import Image from "next/image";
-import type { AppProps /*, AppContext */ } from "next/app";
 
 import styles from "./MobileComp.module.css";
 

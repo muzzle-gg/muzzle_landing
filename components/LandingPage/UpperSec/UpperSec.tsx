@@ -23,7 +23,7 @@ const importedImages = importAll(
   require.context(
     "../../../assets/landing/UpperContainer",
     false,
-    /\.(png|jpe?g|svg)$/
+    /\.(png|jpe?g|svg|webp)$/
   )
 );
 
