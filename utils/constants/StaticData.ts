@@ -7,10 +7,8 @@ import linkedinLogo from "../../assets/landing/icons/linkedin.svg";
 export const images = {
   logo: logo,
   socialMediaIcons: {
-    facebook: facebookLogo,
     instagram: instagramLogo,
     twitter: twitterLogo,
-    linkedin: linkedinLogo,
   },
 };
 export const content = {
@@ -45,8 +43,6 @@ export const lowerSecInfo = [
 ];
 
 export const socialMediaLinks = {
-  facebook: "https://www.facebook.com/",
   instagram: "https://www.instagram.com/muzzle_gg/",
-  twitter: "https://www.twitter.com/",
-  linkedin: "https://www.linkedin.com/",
+  twitter: "https://twitter.com/muzzle_gg",
 };
