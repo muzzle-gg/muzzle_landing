@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/kunaaaaalll/image/upload/v1640761285/Muzzle/muzzle_og_yteaue.png"
+          content="https://res.cloudinary.com/kunaaaaalll/image/upload/v1640761655/Muzzle/muzzle_og_gigxlp.jpg"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="twitter:image"
-          content="https://res.cloudinary.com/kunaaaaalll/image/upload/v1640761285/Muzzle/muzzle_og_yteaue.png"
+          content="https://res.cloudinary.com/kunaaaaalll/image/upload/v1640761655/Muzzle/muzzle_og_gigxlp.jpg"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
