@@ -39,20 +39,24 @@ function MobileComp({ currentActiveIndex }: Props) {
                       }
                 }
               >
-                <Image
-                  src={Screens[key as keyof typeof Screens]}
-                  layout="fill"
-                  objectFit="cover"
-                  onLoad={(e) => {
-                    (e.target as HTMLImageElement).style.opacity = "1";
-                  }}
-                />
+                <div className={styles.ScreenImgSubWrapper}>
+                  <Image
+                    src={Screens[key as keyof typeof Screens]}
+                    layout="fill"
+                    objectFit="cover"
+                    onLoad={(e) => {
+                      (e.target as HTMLImageElement).style.opacity = "1";
+                    }}
+                  />
+                </div>
               </div>
             );
           })}
         </div>
         <div className={styles.CameraDot}>
-          <Image src={CameraDot} layout="fill" />
+          <div className={styles.CameraDotInner}>
+            <Image src={CameraDot} layout="fill" />
+          </div>
         </div>
       </div>
     </div>

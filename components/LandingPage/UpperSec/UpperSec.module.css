@@ -42,6 +42,10 @@
   position: absolute;
   transition: transform 0.5s ease-out;
 }
+.ImagesWrapper img {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
 .CrossWrapper {
   width: 3.9%;
   top: 44.3%;

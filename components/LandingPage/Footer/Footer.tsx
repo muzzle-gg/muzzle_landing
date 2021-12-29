@@ -1,15 +1,21 @@
+import Image from "next/image";
+
 import styles from "./Footer.module.css";
 
-import Image from "next/image";
-import { images } from "../../../utils/constants/StaticData";
+import { images, socialMediaLinks } from "../../../utils/constants/StaticData";
 
 const Footer = () => {
   const socialMediaIconsList = Object.keys(images.socialMediaIcons).map(
     (item, index) => {
       return (
-        <div className={styles.SocialMediaWrapper}>
+        <a
+          href={`${socialMediaLinks[item as keyof typeof socialMediaLinks]}`}
+          className={styles.SocialMediaWrapper}
+          key={index}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
-            key={index}
             src={
               images.socialMediaIcons[
                 item as keyof typeof images.socialMediaIcons
@@ -19,7 +25,7 @@ const Footer = () => {
             alt="facebook"
             layout="responsive"
           />
-        </div>
+        </a>
       );
     }
   );

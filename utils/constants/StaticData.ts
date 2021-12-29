@@ -6,17 +6,16 @@ import linkedinLogo from "../../assets/landing/icons/linkedin.svg";
 
 export const images = {
   logo: logo,
-  socialMediaIcons : {
+  socialMediaIcons: {
     facebook: facebookLogo,
     instagram: instagramLogo,
     twitter: twitterLogo,
-    linkedin: linkedinLogo
-    
-  }
+    linkedin: linkedinLogo,
+  },
 };
 export const content = {
   landingPage: {
-    upperContainer: { 
+    upperContainer: {
       title: [
         "Your",
         "first step towards",
@@ -44,3 +43,10 @@ export const lowerSecInfo = [
       "Get your info tests delivered at home collect a sample from the your progress tests.",
   },
 ];
+
+export const socialMediaLinks = {
+  facebook: "https://www.facebook.com/",
+  instagram: "https://www.instagram.com/muzzle_gg/",
+  twitter: "https://www.twitter.com/",
+  linkedin: "https://www.linkedin.com/",
+};

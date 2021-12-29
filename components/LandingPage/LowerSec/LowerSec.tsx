@@ -128,7 +128,9 @@ const LowerSec = () => {
         ref={wavesWrapperRef}
         style={elementsStyleStates.waves}
       >
-        <Image src={Waves} layout="fill" />
+        <div className={styles.WavesInner}>
+          <Image src={Waves} layout="fill" priority />
+        </div>
       </div>
       <div className={styles.MobileSec}>
         <div

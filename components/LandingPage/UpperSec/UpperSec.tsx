@@ -47,16 +47,12 @@ const ContentList: any = ({ content, isVertical }: Props) => {
       }
     >
       {content.map((item, index) => {
-        return (
-          <>
-            {Array.isArray(item) ? (
-              ContentList({ content: item, isVertical: false })
-            ) : (
-              <p className={`${styles.Title}`} key={index}>
-                {item}
-              </p>
-            )}
-          </>
+        return Array.isArray(item) ? (
+          <ContentList key={index} content={item} isVertical={false} />
+        ) : (
+          <p className={`${styles.Title}`} key={index}>
+            {item}
+          </p>
         );
       })}
     </div>
@@ -116,6 +112,9 @@ const UpperSec = () => {
             layout="responsive"
             quality={100}
             objectFit="contain"
+            onLoad={(e) => {
+              (e.target as HTMLImageElement).style.opacity = "1";
+            }}
           />
         </div>
       );
