@@ -107,7 +107,7 @@ const UpperSec = () => {
         >
           <Image
             src={importedImages[images as keyof typeof importedImages]}
-            alt="image"
+            alt={""}
             className={`${styles.Image}`}
             layout="responsive"
             quality={100}

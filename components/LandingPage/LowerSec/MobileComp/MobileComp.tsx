@@ -47,6 +47,7 @@ function MobileComp({ currentActiveIndex }: Props) {
                     onLoad={(e) => {
                       (e.target as HTMLImageElement).style.opacity = "1";
                     }}
+                    alt=""
                   />
                 </div>
               </div>
@@ -55,7 +56,7 @@ function MobileComp({ currentActiveIndex }: Props) {
         </div>
         <div className={styles.CameraDot}>
           <div className={styles.CameraDotInner}>
-            <Image src={CameraDot} layout="fill" />
+            <Image src={CameraDot} layout="fill" alt="" />
           </div>
         </div>
       </div>
